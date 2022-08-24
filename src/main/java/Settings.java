@@ -1,38 +1,38 @@
 public class Settings {
-    Integer carbRat;
-    Integer covFact;
-    Integer lowGluc;
-    Integer hiGluc;
+    static Integer carbRat;
+    static Integer covFact;
+    static Integer lowGluc;
+    static Integer hiGluc;
 
-    public Integer getCarbRat() {
+    public  static Integer getCarbRat() {
         return carbRat;
     }
 
-    public void setCarbRat(Integer carbRat) {
-        this.carbRat = carbRat;
+    public static void setCarbRat(Integer carbRatio) {
+        carbRat = carbRatio;
     }
 
-    public Integer getCovFact() {
+    public static Integer getCovFact() {
         return covFact;
     }
 
-    public void setCovFact(Integer covFact) {
-        this.covFact = covFact;
+    public static void setCovFact(Integer covFactor) {
+        covFact = covFactor;
     }
 
-    public Integer getLowGluc() {
+    public static Integer getLowGluc() {
         return lowGluc;
     }
 
-    public void setLowGluc(Integer lowGluc) {
-        this.lowGluc = lowGluc;
+    public static void setLowGluc(Integer lowGlucose) {
+        lowGluc = lowGlucose;
     }
 
-    public Integer getHiGluc() {
+    public static Integer getHiGluc() {
         return hiGluc;
     }
 
-    public void setHiGluc(Integer hiGluc) {
-        this.hiGluc = hiGluc;
+    public static void setHiGluc(Integer hiGlucose) {
+        hiGluc = hiGlucose;
     }
 }

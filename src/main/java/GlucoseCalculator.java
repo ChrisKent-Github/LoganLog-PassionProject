@@ -6,17 +6,15 @@ public class GlucoseCalculator {
 
 
     public Double calcGlucInsulin (Integer glucose){
-        Settings settings = new Settings();
-        return (glucose - 100.0)/settings.getCovFact();
+        return Math.round(((glucose - 100.0)/Settings.getCovFact()) * 2) /2.0;
     }
 
     public Double calcCarbInsulin (Double totalCarbs){
-        Settings settings = new Settings();
-        return (totalCarbs/settings.getCarbRat());
+        return Math.round((totalCarbs/Settings.getCarbRat()) * 2) /2.0;
     }
 
     public Double calcTotalInsulin (Integer glucose, Double totalCarbs){
-        return calcGlucInsulin(glucose) + calcCarbInsulin(totalCarbs);
+        return Math.round((calcGlucInsulin(glucose) + calcCarbInsulin(totalCarbs)) * 2) / 2.0;
     }
 
 }
